@@ -1,11 +1,11 @@
 import usersSchema from "../models/usersSchema.js";
 import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
+// import jwt from "jsonwebtoken";
 import * as dotenv from "dotenv";
 
 dotenv.config();
 
-const SECRET = process.env.SECRET;
+// const SECRET = process.env.SECRET;
 
 const login = (req, res) => {
   try {
@@ -32,14 +32,14 @@ const login = (req, res) => {
         });
       }
 
-      const token = jwt.sign({ name: user.name }, SECRET);
+      // const token = jwt.sign({ name: user.name }, SECRET);
 
       res.status(200).json({
         statusCode: 200,
         message: "Login realizado com sucesso",
-        data: {
-          token,
-        },
+        // data: {
+        //  token,
+        // },
       });
     });
   } catch (e) {
