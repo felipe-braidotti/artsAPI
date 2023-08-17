@@ -18,7 +18,7 @@ const artsSchema = new mongoose.Schema(
     },
     tags: {
       type: Array,
-      required: true,
+      required: false,
     },
     image: {
       type: String,
